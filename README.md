@@ -1,43 +1,26 @@
-# Table of Contents
+|code|work space|stage|head|
+|:---:|:---:|:---:|:---:|
+|git diff|O|O|X|
+|git diff --staged|X|O|O|
+|git diff HEAD|O|X|O|
 
-1. [Week 2](#1-week-2)
-2. [Week 3](#2-week-3)
-3. [Week 4](#3-week-4)
-4. [Week 6](#4-week-6)
-5. [Week 7](#5-week-7)
-6. [Week 8](#6-week-8)
-7. [Week 9](#7-week-9)
-8. [Week 10](#8-week-10)
-9. [Week 11](#9-week-11)
-10. [Week 12](#10-week-12)
-11. [Week 13](#11-week-13)
-12. [Week 15](#12-week-15)
+|code|previous|after|
+|:---:|:---:|:---:|
+|git add {file}|work space|stage|
+|git commit|stage|head|
 
-## 1. Week 2
-
-- Github
-  - 중요 개발운영(DevOps) 기능 제공
-  - 전 세계 개발자와 협업 가능
-
-## 2. Week 3
-
-## 3. Week 4
-
-## 4. Week 6
-
-## 5. Week 7
-
-## 6. Week 8
-
-## 7. Week 9
-
-## 8. Week 10
-
-## 9. Week 11
-
-## 10. Week 12
-
-## 11. Week 13
-
-## 12. Week 15
-
+|code|explain|
+|:---:|:---:|
+|cat {file}|{file} 내용 보기|
+|echo {content} >> {file}|{content}를 {file}에 추가|
+|echo {content} > {file}|{content}를 가진 {file}을 생성|
+|git status|work space, stage, head 간의 차이를 확인|
+|git status -s|git status의 간소화 버전|
+|git log --oneline|한 줄로 변경 사항 확인|
+|git commit -am {message}|변경 사항이 있는 모든 파일을 add하고 commit|
+|git revert HEAD|이전 버전으로 되돌림|
+|git reset --hard HEAD~|이전 버전을 복사해서 적용. 로그도 삭제되며, 이후의 버전을 삭제.<br>모든 저장소를 동일하게 맞춘다. (soft는 head만 변경, mixed는 head, stage 변경)|
+|git config --global alias.{name} {command}|{name}을 호출하면 {command}를 실행시킴. git {name}으로 가능.|
+|git revert HEAD --no-edit|이전으로 되돌리는데, 메시지를 오토로 넣음.|
+|git stash|임시 저장소에 현재 작업 공간을 저장|
+|git stash apply|임시 저장소의 것을 불러옴|
